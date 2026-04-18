@@ -3,4 +3,7 @@
 @theme {
   --color-jayhawk-blue: #0051ba;
   --color-ku-crimson: #e8000d;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+  --font-serif: "Times New Roman", serif;
 }

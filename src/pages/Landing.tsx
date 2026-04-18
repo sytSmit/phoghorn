@@ -7,41 +7,22 @@ function Landing() {
     const dotInterval = setInterval(() => {
       setLoadingDots(prev => prev.length >= 3 ? '' : prev + '.')
     }, 500)
-
     return () => clearInterval(dotInterval)
   }, [])
 
   return (
-    <div style={appStyles.container}>
+    <div className="flex h-screen flex-col items-center justify-center bg-[#0b0b0f] text-[#e5e7eb] text-center font-sans">
       <div>
-        <h1 style={appStyles.title}>Phoghorn</h1>
-        <p style={appStyles.subtitle}>
-          3D Campus Map. Coming Soon{loadingDots}
+        <h1 className="text-5xl font-sans font-bold mb-2 text-jayhawk-blue">
+          Phoghorn
+        </h1>
+        <p className="opacity-80 text-xl tracking-wide">
+          3D Campus Map. Coming Soon
+          <span className="text-ku-crimson font-bold">{loadingDots}</span>
         </p>
       </div>
     </div>
   )
-}
-
-const appStyles = {
-  container: {
-    height: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#0b0b0f',
-    color: '#e5e7eb',
-    fontFamily: 'system-ui, sans-serif',
-    textAlign: 'center' as const,
-  },
-  title: {
-    fontSize: '2.5rem',
-    marginBottom: '0.5rem',
-  },
-  subtitle: {
-    opacity: 0.7,
-    fontSize: '1.2rem',
-  },
 }
 
 export default Landing
