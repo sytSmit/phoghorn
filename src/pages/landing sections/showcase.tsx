@@ -72,7 +72,7 @@ function Showcase() {
                 The indoor 3D campus map for KU
               </h2>
               <p className="max-w-prose text-sm leading-relaxed text-sapphire-200 sm:text-base lg:text-lg">
-                No more wandering the halls looking for Room 1215. Phoghorn provides multi-floor 3D routing so you know how to get you directly to your desk before the first day of class.
+                No more wandering the halls looking for Room 1215. Phoghorn provides multi-floor 3D routing so you know how to get directly to your desk before the first day of class.
               </p>
             </div>
           </div>
