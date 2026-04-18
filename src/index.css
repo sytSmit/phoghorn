@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-jayhawk-blue: #0051ba;
+  --color-ku-crimson: #e8000d;
+}
