@@ -3,7 +3,70 @@
 @theme {
   --color-jayhawk-blue: #0051ba;
   --color-ku-crimson: #e8000d;
-  
-  --font-sans: "Inter", ui-sans-serif, system-ui;
+
+  --font-sans: Arial, Helvetica, sans-serif;
   --font-serif: "Times New Roman", serif;
+
+  /* Coolors below */
+  --color-turf-green-50: #edf8f2;
+  --color-turf-green-100: #dbf0e4;
+  --color-turf-green-200: #b6e2c9;
+  --color-turf-green-300: #92d3ae;
+  --color-turf-green-400: #6dc593;
+  --color-turf-green-500: #49b678;
+  --color-turf-green-600: #3a9260;
+  --color-turf-green-700: #2c6d48;
+  --color-turf-green-800: #1d4930;
+  --color-turf-green-900: #0f2418;
+  --color-turf-green-950: #0a1a11;
+
+  --color-sea-green-50: #eef6f2;
+  --color-sea-green-100: #ddeee4;
+  --color-sea-green-200: #bcdcca;
+  --color-sea-green-300: #9acbaf;
+  --color-sea-green-400: #78ba95;
+  --color-sea-green-500: #57a87a;
+  --color-sea-green-600: #458762;
+  --color-sea-green-700: #346549;
+  --color-sea-green-800: #234331;
+  --color-sea-green-900: #112218;
+  --color-sea-green-950: #0c1811;
+
+  --color-light-yellow-50: #fefee6;
+  --color-light-yellow-100: #fdfdce;
+  --color-light-yellow-200: #fbfb9d;
+  --color-light-yellow-300: #fafa6b;
+  --color-light-yellow-400: #f8f83a;
+  --color-light-yellow-500: #f6f609;
+  --color-light-yellow-600: #c5c507;
+  --color-light-yellow-700: #949405;
+  --color-light-yellow-800: #626204;
+  --color-light-yellow-900: #313102;
+  --color-light-yellow-950: #222201;
+
+  --color-sapphire-50: #e5f1ff;
+  --color-sapphire-100: #cce2ff;
+  --color-sapphire-200: #99c5ff;
+  --color-sapphire-300: #66a8ff;
+  --color-sapphire-400: #338bff;
+  --color-sapphire-500: #006eff;
+  --color-sapphire-600: #0058cc;
+  --color-sapphire-700: #004299;
+  --color-sapphire-800: #002c66;
+  --color-sapphire-900: #001633;
+  --color-sapphire-950: #000f24;
+
+  --color-racing-red-50: #ffe5e7;
+  --color-racing-red-100: #ffcccf;
+  --color-racing-red-200: #ff999e;
+  --color-racing-red-300: #ff666e;
+  --color-racing-red-400: #ff333d;
+  --color-racing-red-500: #ff000d;
+  --color-racing-red-600: #cc000a;
+  --color-racing-red-700: #990008;
+  --color-racing-red-800: #660005;
+  --color-racing-red-900: #330003;
+  --color-racing-red-950: #240002;
+
+
 }
