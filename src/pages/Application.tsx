@@ -1,6 +1,6 @@
 // src/pages/App.tsx
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import BoundedOrbits from '../components/BoundedOrbits'
 import CampusModel from '../components/CampusModel'
 
 function Application() {
@@ -13,12 +13,7 @@ function Application() {
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 20, 10]} intensity={1} castShadow />
         <CampusModel />
-        <OrbitControls
-          enablePan={true}
-          enableZoom={true}
-          enableRotate={true}
-          maxPolarAngle={Math.PI / 2.2} // prevents going underground
-        />
+        <BoundedOrbits />
       </Canvas>
     </div>
   )
