@@ -76,7 +76,7 @@ const TechWeb = () => {
   }, [activeId])
 
   return (
-    <div className="relative h-[25vh] min-h-[240px] w-full max-w-4xl select-none font-mono text-xs text-white sm:h-[30vh] sm:min-h-[260px]">
+    <div className="relative h-[26vh] min-h-[220px] w-full max-w-4xl select-none font-mono text-[10px] text-white sm:h-[30vh] sm:min-h-[260px] sm:text-xs">
       <style>
         {`
           @keyframes nodeFadeIn {
@@ -151,17 +151,17 @@ const TechWeb = () => {
             <div className="flex flex-col items-center justify-center">
               <div className={`transition-transform duration-300 ease-out ${isActive ? 'scale-125' : 'scale-100'}`}>
                 <div
-                  className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-sapphire-600 bg-sapphire-900 shadow-lg transition-all duration-300 sm:h-14 sm:w-14"
+                  className="relative flex h-10 w-10 items-center justify-center rounded-2xl border border-sapphire-600 bg-sapphire-900 shadow-lg transition-all duration-300 sm:h-14 sm:w-14"
                   style={{
                     boxShadow: isActive ? `0 0 25px ${node.color}88` : 'none',
                     borderColor: isActive ? node.color : undefined,
                   }}
                 >
-                  <img src={node.icon} alt={node.label} className="h-7 w-7 object-contain sm:h-8 sm:w-8" />
+                  <img src={node.icon} alt={node.label} className="h-6 w-6 object-contain sm:h-8 sm:w-8" />
                 </div>
               </div>
               <span
-                className={`absolute top-full mt-3 whitespace-nowrap font-bold tracking-tight transition-colors duration-300 ${isActive ? 'text-white' : 'text-sapphire-400'}`}
+                className={`absolute top-full mt-2 max-w-[4.75rem] break-words text-center text-[9px] leading-tight font-bold tracking-tight transition-colors duration-300 sm:mt-3 sm:max-w-none sm:whitespace-nowrap sm:text-xs ${isActive ? 'text-white' : 'text-sapphire-400'}`}
                 style={{ color: isActive ? node.color : undefined }}
               >
                 {isActive ? node.role : node.label}
@@ -183,11 +183,14 @@ function Dev() {
   }, [])
 
   return (
-    <section id="dev" className="relative flex h-screen w-full snap-start snap-always flex-col items-center justify-center overflow-hidden px-6 text-center">
+    <section
+      id="dev"
+      className="relative flex min-h-[100svh] w-full snap-start snap-always flex-col items-center justify-start overflow-visible px-4 pb-12 pt-16 text-center md:h-screen md:justify-center md:overflow-hidden md:px-6 md:pb-0 md:pt-0"
+    >
       
-      <div className="flex w-full flex-col items-center justify-center gap-6 sm:gap-8">
-        <div className="flex items-center gap-4 sm:gap-6">
-          <h2 className="text-4xl font-bold tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl">
+      <div className="flex w-full flex-col items-center justify-center gap-5 sm:gap-8">
+        <div className="flex items-center gap-3 sm:gap-6">
+          <h2 className="text-3xl font-bold tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl">
             Under the Hood
 </h2>
           <a 
@@ -206,10 +209,10 @@ function Dev() {
 
         <TechWeb />
 
-        <div className="mt-2 flex w-full max-w-5xl flex-col items-center gap-8 border-t border-sapphire-800/50 pt-6 lg:flex-row lg:items-stretch lg:justify-between">
+        <div className="mt-2 flex w-full max-w-5xl flex-col items-center gap-6 border-t border-sapphire-800/50 pt-5 sm:gap-8 sm:pt-6 lg:flex-row lg:items-stretch lg:justify-between">
           
           <div className="flex w-full flex-col items-start justify-start lg:w-auto lg:py-2">
-            <p className="mb-8 w-full text-left text-xs font-bold tracking-[0.2em] text-sapphire-500 sm:mb-12">
+            <p className="mb-6 w-full text-left text-xs font-bold tracking-[0.2em] text-sapphire-500 sm:mb-12">
               DEVELOPED AT{' '}
               <a 
                 href="https://www.hackku.org/" 
@@ -222,7 +225,7 @@ function Dev() {
               2026 BY
             </p>
 
-            <div className="grid w-full grid-cols-2 gap-x-8 gap-y-8 text-left sm:gap-x-16 sm:gap-y-12 lg:gap-y-12">
+            <div className="grid w-full grid-cols-1 gap-x-8 gap-y-6 text-left sm:grid-cols-2 sm:gap-x-16 sm:gap-y-12 lg:gap-y-12">
               {team.map((member) => (
                 <a 
                   key={member.name} 
@@ -231,10 +234,10 @@ function Dev() {
                   rel="noreferrer"
                   className="group flex flex-col items-start transition-transform hover:-translate-y-1"
                 >
-                  <span className="text-2xl font-bold text-sapphire-100 transition-colors group-hover:text-jayhawk-blue group-hover:drop-shadow-[0_0_10px_rgba(0,81,186,0.6)] sm:text-3xl">
+                  <span className="text-xl font-bold text-sapphire-100 transition-colors group-hover:text-jayhawk-blue group-hover:drop-shadow-[0_0_10px_rgba(0,81,186,0.6)] sm:text-3xl">
                     {member.name}
                   </span>
-                  <span className="mt-1 text-base font-medium tracking-wide text-sapphire-400 transition-colors group-hover:text-sapphire-300 sm:text-lg">
+                  <span className="mt-1 text-sm font-medium tracking-wide text-sapphire-400 transition-colors group-hover:text-sapphire-300 sm:text-lg">
                     {member.role}
                   </span>
                 </a>

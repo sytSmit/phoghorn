@@ -2,7 +2,10 @@ import logo from '../../assets/logo.svg'
 
 function Hero() {
   return (
-    <section id="home" className="relative flex h-screen w-full snap-start snap-always flex-col items-center justify-center px-6">
+    <section
+      id="home"
+      className="relative flex h-[100svh] w-full snap-start snap-always flex-col items-center justify-center px-6 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:h-screen md:pb-0"
+    >
       <div className="flex flex-col items-center text-center">
         <img 
           src={logo} 
@@ -29,7 +32,7 @@ function Hero() {
       {/* SEE MORE BUTTON */}
       <a 
         href="#showcase"
-        className="group absolute bottom-8 flex flex-col items-center text-xs tracking-[0.2em] text-sapphire-400 transition-colors hover:text-white"
+        className="group absolute bottom-[max(1.25rem,env(safe-area-inset-bottom))] flex flex-col items-center text-[10px] tracking-[0.2em] text-sapphire-400 transition-colors hover:text-white sm:bottom-8 sm:text-xs"
       >
         <p className="mb-2">SEE MORE ABOUT THE SITE</p>
         <svg 

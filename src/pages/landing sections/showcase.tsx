@@ -28,15 +28,15 @@ function Showcase() {
     <section 
       id="showcase" 
       ref={sectionRef}
-      className="relative flex h-screen w-full snap-start snap-always flex-col items-center justify-center overflow-hidden px-6"
+      className="relative flex h-[100svh] w-full snap-start snap-always flex-col items-center justify-center overflow-hidden px-4 md:h-screen md:px-6"
     >
-      <div className="relative flex h-full w-full max-w-7xl items-center justify-center">
+      <div className="relative flex h-full w-full max-w-7xl items-start justify-center pt-12 sm:pt-16 md:items-center md:pt-0">
         
         {/* THE VIDEO ELEMENT */}
         <div 
           className={`absolute z-20 aspect-video w-[90vw] max-w-2xl overflow-hidden rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.5)] transition-all duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)]
             ${showDrawer 
-              ? 'scale-95 -translate-y-[25%] md:translate-y-0 md:-translate-x-[40%]' 
+              ? 'scale-95 -translate-y-[34%] sm:-translate-y-[30%] md:translate-y-0 md:-translate-x-[40%]' 
               : 'scale-100 translate-x-0 translate-y-0'
             }`}
         >
@@ -54,9 +54,9 @@ function Showcase() {
         <div 
           className={`absolute z-10 flex w-[95vw] max-w-5xl overflow-hidden rounded-2xl border border-sapphire-700 bg-sapphire-900/90 text-left shadow-2xl backdrop-blur-xl transition-all duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] 
             /* Height and positioning */
-            min-h-[400px] md:h-[55%]
+            min-h-[340px] sm:min-h-[380px] md:h-[55%]
             ${showDrawer 
-              ? 'opacity-100 translate-y-[28%] md:translate-y-0 md:translate-x-[15%] scale-100' 
+              ? 'opacity-100 translate-y-[14%] sm:translate-y-[20%] md:translate-y-0 md:translate-x-[15%] scale-100' 
               : 'opacity-0 translate-x-0 translate-y-0 scale-95'
             }`}
         >
@@ -67,7 +67,7 @@ function Showcase() {
             <div className="hidden md:block md:w-[45%] lg:w-[42%] shrink-0" />
 
             {/* 2. THE CONTENT AREA: Now has full room to breathe */}
-            <div className="flex flex-col justify-center p-8 pt-[45%] md:p-12 md:pt-12">
+            <div className="flex flex-col justify-center p-6 pt-[36%] sm:p-8 sm:pt-[42%] md:p-12 md:pt-12">
               <h2 className="mb-4 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
                 The indoor 3D campus map for KU
               </h2>
@@ -83,7 +83,7 @@ function Showcase() {
       {/* DOWN ARROW */}
       <a 
         href="#dev"
-        className="group absolute bottom-8 z-30 flex flex-col items-center text-xs tracking-[0.2em] text-sapphire-400 transition-colors hover:text-white"
+        className="group absolute bottom-[max(1.25rem,env(safe-area-inset-bottom))] z-30 flex flex-col items-center text-xs tracking-[0.2em] text-sapphire-400 transition-colors hover:text-white sm:bottom-8"
       >
         <svg 
           className="h-6 w-6 animate-bounce text-sapphire-300 transition-colors group-hover:text-white" 
