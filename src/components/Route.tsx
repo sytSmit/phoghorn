@@ -1,6 +1,6 @@
 import { useThree } from '@react-three/fiber'
 import {useEffect, useState } from 'react'
-import routesData from '../assets/routes.json'
+import routesData from '../assets/devpost.json'
 
 // route settings
 
