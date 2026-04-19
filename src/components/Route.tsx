@@ -19,6 +19,9 @@ const NODE_RADIUS = 0.08
 const LINE_COLOR = 'white'
 const NODE_COLOR = '#dfff00'
 
+const PATH_Y_OFFSET = 5
+
+const CAMERA_HEIGHT = 1.2
 
 const PATH_Y_OFFSET = 1
 
@@ -36,11 +39,14 @@ export default function CameraRouteController() {
         if (!route.points || route.points.length === 0) return
 
         const start = route.points[0]
-        camera.position.set(start.x, start.y + 1.6, start.z)
+
+
+        camera.position.set(start.x, start.y + CAMERA_HEIGHT, start.z)
 
         if (route.points.length > 1) {
             const next = route.points[1]
-            camera.lookAt(next.x, next.y + 1.6, next.z)
+
+            camera.lookAt(next.x, next.y + CAMERA_HEIGHT, next.z)
         }
     }, [camera, route])
 
@@ -55,7 +61,7 @@ export default function CameraRouteController() {
                         count={route.points.length}
                         array={
                             new Float32Array(
-                                route.points.flatMap((p) => [p.x, p.y + 0.03, p.z])
+                                route.points.flatMap((p) => [p.x, p.y + 40, p.z])
                             )
                         }
                         itemSize={3}

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import demoVideo from '../../assets/demo.mp4'
+import showcaseImage from '../../assets/image.png'
 
 function Showcase() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -32,7 +32,7 @@ function Showcase() {
     >
       <div className="relative flex h-full w-full max-w-7xl items-start justify-center pt-12 sm:pt-16 md:items-center md:pt-0">
         
-        {/* THE VIDEO ELEMENT */}
+        {/* THE SHOWCASE MEDIA */}
         <div 
           className={`absolute z-20 aspect-video w-[90vw] max-w-2xl overflow-hidden rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.5)] transition-all duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)]
             ${showDrawer 
@@ -40,12 +40,9 @@ function Showcase() {
               : 'scale-100 translate-x-0 translate-y-0'
             }`}
         >
-          <video 
-            src={demoVideo}
-            autoPlay 
-            loop 
-            muted 
-            playsInline
+          <img
+            src={showcaseImage}
+            alt="Phoghorn showcase"
             className="pointer-events-none h-full w-full object-cover"
           />
         </div>
