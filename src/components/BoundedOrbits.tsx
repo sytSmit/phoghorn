@@ -17,8 +17,8 @@ const MAX_AZIMUTH_ANGLE = Infinity
 // bounds for where the camera target can move on your map
 const MIN_TARGET_X = -100
 const MAX_TARGET_X = 100
-const MIN_TARGET_Y = 0
-const MAX_TARGET_Y = 0
+const MIN_TARGET_Y = -100
+const MAX_TARGET_Y = 100
 const MIN_TARGET_Z = -100
 const MAX_TARGET_Z = 100
 
