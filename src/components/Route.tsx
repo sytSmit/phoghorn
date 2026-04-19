@@ -20,6 +20,11 @@ const LINE_COLOR = 'white'
 const NODE_COLOR = '#dfff00'
 
 
+const PATH_Y_OFFSET = 1
+
+const CAMERA_HEIGHT = 3
+
+
 export default function CameraRouteController() {
     const { camera } = useThree()
     const route = routesData as unknown as RoutesFile
@@ -63,7 +68,7 @@ export default function CameraRouteController() {
             {route.points.map((point, index) => (
                 <mesh
                     key={index}
-                    position={[point.x, point.y + 0.12, point.z]}
+                    position={[point.x, point.y + PATH_Y_OFFSET, point.z]}
                     onClick={(e) => {
                         e.stopPropagation()
 
@@ -74,13 +79,13 @@ export default function CameraRouteController() {
 
                         camera.position.set(
                             clickedPoint.x,
-                            clickedPoint.y + 1,
+                            clickedPoint.y + CAMERA_HEIGHT,
                             clickedPoint.z
                         )
 
                         camera.lookAt(
                             clickedPoint.x,
-                            clickedPoint.y + 1,
+                            clickedPoint.y + CAMERA_HEIGHT,
                             clickedPoint.z - 1
                         )
                     }}
