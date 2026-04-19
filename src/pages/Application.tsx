@@ -2,11 +2,13 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import BoundedOrbits from '../components/BoundedOrbits'
 import CampusModel from '../components/CampusModel'
+import CameraRouteController from '../components/Route'
 import Hand from '../components/Hand'
 import Navbar from '../components/Navbar'
 import Navbar2 from '../components/Navbar2'
 
 function Application() {
+  //const [isPlaying, setIsPlaying] = useState(true)
   return (
     <div style={{ width: '100vw', height: '100vh', background: '#050505' }}>
       <Navbar />
@@ -30,6 +32,10 @@ function Application() {
         </Suspense>
 
         <BoundedOrbits />
+        <CameraRouteController
+          //onRouteComplete={() => setIsPlaying(false)}
+        />
+
       </Canvas>
     </div>
   )
