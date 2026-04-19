@@ -23,6 +23,11 @@ const PATH_Y_OFFSET = 5
 
 const CAMERA_HEIGHT = 1.2
 
+const PATH_Y_OFFSET = 1
+
+const CAMERA_HEIGHT = 3
+
+
 export default function CameraRouteController() {
     const { camera } = useThree()
     const route = routesData as unknown as RoutesFile
@@ -79,13 +84,13 @@ export default function CameraRouteController() {
                         setSelectedPointIndex(index)
 
                         camera.position.set(
-                            clickedPoint.x + CAMERA_HEIGHT,
+                            clickedPoint.x,
                             clickedPoint.y + CAMERA_HEIGHT,
                             clickedPoint.z
                         )
 
                         camera.lookAt(
-                            clickedPoint.x + CAMERA_HEIGHT,
+                            clickedPoint.x,
                             clickedPoint.y + CAMERA_HEIGHT,
                             clickedPoint.z - 1
                         )
