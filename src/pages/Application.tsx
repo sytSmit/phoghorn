@@ -4,11 +4,13 @@ import BoundedOrbits from '../components/BoundedOrbits'
 import CampusModel from '../components/CampusModel'
 import Hand from '../components/Hand'
 import Navbar from '../components/Navbar'
+import Navbar2 from '../components/Navbar2'
 
 function Application() {
   return (
     <div style={{ width: '100vw', height: '100vh', background: '#050505' }}>
       <Navbar />
+      <Navbar2 />
       <Canvas
         camera={{ position: [0, 50, 100], fov: 45 }}
         shadows
