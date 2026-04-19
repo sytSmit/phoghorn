@@ -1,9 +1,10 @@
-// src/components/CampusModel.tsx
 import { useGLTF, Html } from '@react-three/drei'
 import { useState } from 'react'
 import * as THREE from 'three'
 import type { ThreeEvent } from '@react-three/fiber'
 import NodePopup from './NodePopup'
+
+const MODEL_URL = new URL('../assets/campus.glb', import.meta.url).href;
 
 interface NodeInfo {
   name: string
@@ -12,16 +13,14 @@ interface NodeInfo {
 }
 
 export default function CampusModel() {
-  const { scene } = useGLTF('/src/assets/campus.glb')
+  const { scene } = useGLTF(MODEL_URL)
   const [selectedNode, setSelectedNode] = useState<NodeInfo | null>(null)
 
   const handleClick = (e: ThreeEvent<MouseEvent>) => {
-    e.stopPropagation()
     const mesh = e.object
 
-    // Only respond to meshes named like doors/POIs
-    // This relies on your naming convention in Blender
     if (mesh.name.startsWith('door_') || mesh.name.startsWith('poi_')) {
+      e.stopPropagation()
       setSelectedNode({
         name: mesh.name,
         position: e.point.clone(),
@@ -53,5 +52,4 @@ export default function CampusModel() {
   )
 }
 
-// Preload for performance
-useGLTF.preload('/src/assets/campus.glb')
+useGLTF.preload(MODEL_URL)
