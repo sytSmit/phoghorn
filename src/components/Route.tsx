@@ -23,10 +23,6 @@ const PATH_Y_OFFSET = 5
 
 const CAMERA_HEIGHT = 1.2
 
-const PATH_Y_OFFSET = 1
-
-const CAMERA_HEIGHT = 3
-
 
 export default function CameraRouteController() {
     const { camera } = useThree()
@@ -58,13 +54,12 @@ export default function CameraRouteController() {
                 <bufferGeometry>
                     <bufferAttribute
                         attach="attributes-position"
-                        count={route.points.length}
-                        array={
+                        args={[
                             new Float32Array(
                                 route.points.flatMap((p) => [p.x, p.y + 40, p.z])
-                            )
-                        }
-                        itemSize={3}
+                            ),
+                            3,
+                        ]}
                     />
                 </bufferGeometry>
                 <lineBasicMaterial color={LINE_COLOR} />

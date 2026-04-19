@@ -186,10 +186,10 @@ const Navbar2 = () => {
             <div className="p-6">
               <nav
                 ref={glassRef as any}
-                className="relative overflow-hidden bg-main-900/20 backdrop-blur-md border border-white/10 shadow-2xl flex will-change-transform"
+                className="relative overflow-hidden bg-black/75 backdrop-blur-md border border-white/10 shadow-2xl flex will-change-transform"
                 style={{ width: 48, height: 48, borderRadius: "24px" }}
               >
-                <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
 
                 <div 
                   ref={contentRef} 
@@ -297,7 +297,7 @@ const Navbar2 = () => {
         </div>
 
         <div className="fixed -left-[9999px] -top-[9999px] opacity-0 pointer-events-none">
-          <div ref={measureRef} className="w-64 h-128 bg-main-900/20 border border-white/10"></div>
+          <div ref={measureRef} className="w-64 h-128 bg-black/75 border border-white/10"></div>
         </div>
       </div>
     </>
