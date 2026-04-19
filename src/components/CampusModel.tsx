@@ -17,10 +17,10 @@ export default function CampusModel() {
   const [selectedNode, setSelectedNode] = useState<NodeInfo | null>(null)
 
   const handleClick = (e: ThreeEvent<MouseEvent>) => {
-    e.stopPropagation()
     const mesh = e.object
 
     if (mesh.name.startsWith('door_') || mesh.name.startsWith('poi_')) {
+      e.stopPropagation()
       setSelectedNode({
         name: mesh.name,
         position: e.point.clone(),
