@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import showcaseImage from '../../assets/image.png'
+import showcaseVideo from '../../assets/demo.mp4'
 
 function Showcase() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -40,10 +40,13 @@ function Showcase() {
               : 'scale-100 translate-x-0 translate-y-0'
             }`}
         >
-          <img
-            src={showcaseImage}
-            alt="Phoghorn showcase"
+          <video
+            src={showcaseVideo}
             className="pointer-events-none h-full w-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
           />
         </div>
 
