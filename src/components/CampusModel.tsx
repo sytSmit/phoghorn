@@ -1,8 +1,9 @@
 // src/components/CampusModel.tsx
 import { useGLTF, Html } from '@react-three/drei'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import * as THREE from 'three'
 import type { ThreeEvent } from '@react-three/fiber'
+import NodePopup from './NodePopup'
 
 interface NodeInfo {
   name: string
